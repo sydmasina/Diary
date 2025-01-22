@@ -1,1 +1,26 @@
-﻿<h1>Dairy Entries index</h1>
+﻿@model List<DiaryEntry>
+
+<h1>Dairy Entries index</h1>
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Content</th>
+                <th scope="col">Date</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var entry in Model)
+            {
+                <tr>
+                    <td>@entry.Title</td>
+                    <td>@entry.Content</td>
+                    <td>@entry.Created.ToString("dd MMM yyyy")</td>
+                    <td>Edit and Delete!</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
