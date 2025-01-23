@@ -1,0 +1,66 @@
+﻿@model DiaryEntry
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header text-center bg-primary text-white">
+                    <h4>Edit Diary Entry</h4>
+                </div>
+                <div class="card-body">
+                    <form method="post" class="needs-validation" asp-action="EditEntry">
+                        <input type="hidden" name="EntryId" value="@Model.EntryId" />
+                        <div class="mb-3">
+                            <label asp-for="Title" class="form-label">Title</label>
+                            <input type="text"
+                                   class="form-control"
+                                   id="title"
+                                   asp-for="Title"                                   placeholder="Enter the title"
+                                   required />
+                            <span asp-validation-for="Title" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="Content" class="form-label">Content</label>
+                            <textarea class="form-control"
+                                      id="content"
+                                      asp-for="Content"
+                                      rows="5"
+                                      placeholder="Write your diary entry here..."
+                                      required></textarea>
+                            <span asp-validation-for="Content" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="Created" class="form-label">Date</label>
+                            <div class="input-group">
+                                <input type="text"
+                                       id="popup-datepicker"
+                                       class="form-control"
+                                       asp-for="Created"
+                                       placeholder="Click to select a date"
+                                       required
+                                       readonly>
+                                <span class="input-group-text">
+                                    <i class="bi bi-calendar"></i>
+                                </span>
+                            </div>
+                            <span asp-validation-for="Created" class="text-danger"></span>
+                        </div>
+                        <div class="row justify-content-between">
+                            <div class="col-lg-4 mb-2 mb-lg-0">
+                                <button type="submit" class="btn btn-primary w-100">Update Entry</button>
+                            </div>
+                            <div class="col-lg-4">
+                                <a href="/DiaryEntries" class="btn btn-dark w-100">Cancel</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
