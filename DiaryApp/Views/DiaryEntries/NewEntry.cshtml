@@ -9,13 +9,11 @@
                 </div>
                 <div class="card-body">
                     <form method="post" class="needs-validation" asp-action="NewEntry">
-                        <div asp-validation-summary="All" class="text-danger"></div>
                         <div class="mb-3">
                             <label asp-for="Title" class="form-label">Title</label>
                             <input type="text"
                                    class="form-control"
                                    id="title"
-                                   name="title"
                                    asp-for="Title"
                                    placeholder="Enter the title"
                                    required
@@ -26,7 +24,6 @@
                             <label asp-for="Content" class="form-label">Content</label>
                             <textarea class="form-control"
                                       id="content"
-                                      name="content"
                                       asp-for="Content"
                                       rows="5"
                                       placeholder="Write your diary entry here..."
