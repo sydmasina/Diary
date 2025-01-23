@@ -1,6 +1,20 @@
 ﻿@model List<DiaryEntry>
 
-<h1>Dairy Entries index</h1>
+
+<div class="row mt-4 mb-2">
+    <div class="col">
+        <a type="button"
+           asp-area=""
+           asp-controller="DiaryEntries"
+           asp-action="NewEntry"
+           class="btn btn-primary btn-lg">
+            Add Diary Entry
+            <i class="bi bi-pencil-square"></i>
+        </a>
+    </div>
+    <div class="col text-end"><h2>Dairy Entries</h2></div>
+</div>
+
 <div class="table-responsive">
     <table class="table table-striped">
         <thead>
