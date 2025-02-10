@@ -15,6 +15,10 @@
 </head>
 <body>
     <header>
+        @{
+            var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
+            var currentAction = ViewContext.RouteData.Values["action"]?.ToString();
+        }
         <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">DiaryApp  <i class="bi bi-journal-bookmark"></i></a>
@@ -24,13 +28,14 @@
                 <div class="collapse navbar-collapse" id="navbarColor01">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link
+                               @((currentController == "DiaryEntries" && currentAction=="Index")? "active" : "")"
+                               asp-area="" asp-controller="DiaryEntries" asp-action="Index"><i class="bi bi-pencil-square"></i> My Diary</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="DiaryEntries" asp-action="Index">My Diary</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link
+                               @((currentController == "DiaryEntries" && currentAction=="Privacy")? "active" : "")"
+                               asp-area="" asp-controller="DiaryEntries" asp-action="Privacy"><i class="bi bi-info-circle"></i> Privacy</a>
                         </li>
                     </ul>
                 </div>
@@ -45,7 +50,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2025 - DiaryApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2025 - DiaryApp - <a asp-area="" asp-controller="DiaryEntries" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
