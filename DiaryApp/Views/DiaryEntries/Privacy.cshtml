@@ -2,28 +2,75 @@
     ViewData["Title"] = "Privacy Policy & Disclaimer";
 }
 
-<h1>Privacy Policy & Disclaimer</h1>
-<p><strong>Last Updated: @DateTime.Now.ToString("MMMM dd, yyyy")</strong></p>
+<div class="container mt-5">
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <h1 class="text-center text-warning mb-4">
+                <i class="bi bi-shield-exclamation"></i> Privacy Policy & Disclaimer
+            </h1>
+            <p class="text-muted text-center">
+                <strong>Last Updated: @DateTime.Now.ToString("MMMM dd, yyyy")</strong>
+            </p>
 
-<p>Welcome to the <strong>Diary Test App</strong>. This application is designed for testing purposes only and should not be used to store sensitive or personal information. By using this app, you agree to the following terms:</p>
+            <p class="lead">
+                Welcome to <strong>DevSpot</strong>, a job posting application currently in development and testing.
+                By using this application, you acknowledge and agree to the following terms:
+            </p>
 
-<h3>1. No Data Security Guarantee</h3>
-<p>This application is intended solely for testing and development. There is no guarantee that data entered into the app will be securely stored, protected, or backed up. Do not enter confidential, sensitive, or personal data.</p>
+            <hr>
 
-<h3>2. No Liability</h3>
-<p>The developers of this test application are not responsible for any loss, data breach, or unauthorized access that may occur. You use this application at your own risk.</p>
+            <div class="mb-4">
+                <h3><i class="fas fa-lock"></i> No Data Security Guarantee</h3>
+                <p>
+                    DevSpot is a test application, and we do not guarantee the security, confidentiality,
+                    or availability of any data entered. <strong>Avoid submitting real personal or sensitive information.</strong>
+                </p>
+            </div>
 
-<h3>3. Data Usage & Deletion</h3>
-<ul>
-    <li>Any data entered may be deleted at any time without prior notice.</li>
-    <li>The application does not share or sell any user data.</li>
-    <li>Since this is a test application, data retention is not guaranteed.</li>
-</ul>
+            <div class="mb-4">
+                <h3><i class="fas fa-exclamation-triangle"></i> No Liability</h3>
+                <p>
+                    We are not responsible for any data loss, breach, or misuse of information posted on this platform.
+                    This application is for <strong>testing purposes only</strong>, and any use is at your own risk.
+                </p>
+            </div>
 
-<h3>4. No Warranty</h3>
-<p>This application is provided "as-is" without any warranties, express or implied. The developers disclaim all liability regarding the reliability, availability, or functionality of the app.</p>
+            <div class="mb-4">
+                <h3><i class="fas fa-database"></i> Data Usage & Deletion</h3>
+                <ul>
+                    <li>Any job postings or user data <strong>may be deleted</strong> at any time without prior notice.</li>
+                    <li>DevSpot does not share, sell, or monetize user data.</li>
+                    <li>Since this is a test application, <strong>data retention is not guaranteed</strong>.</li>
+                </ul>
+            </div>
 
-<h3>5. Changes to This Disclaimer</h3>
-<p>This privacy notice may be updated at any time without prior notice. Continued use of the app constitutes acceptance of any modifications.</p>
+            <div class="mb-4">
+                <h3><i class="fas fa-briefcase"></i> No Guarantee of Job Listings</h3>
+                <ul>
+                    <li>Job listings on DevSpot are for <strong>testing purposes only</strong> and do not represent real employment opportunities.</li>
+                    <li>Employers and job seekers should not rely on the platform for actual hiring or job applications.</li>
+                </ul>
+            </div>
 
-<p><strong>If you have any questions or concerns, please discontinue use immediately.</strong></p>
+            <div class="mb-4">
+                <h3><i class="fas fa-cogs"></i> No Warranty</h3>
+                <p>
+                    This application is provided <strong>"as-is"</strong> without any warranties, express or implied.
+                    We do not guarantee uptime, performance, or functionality.
+                </p>
+            </div>
+
+            <div class="mb-4">
+                <h3><i class="fas fa-sync-alt"></i> Changes to This Disclaimer</h3>
+                <p>
+                    This policy may be updated at any time without prior notice.
+                    Continued use of the app constitutes acceptance of any modifications.
+                </p>
+            </div>
+
+            <p class="text-center mt-4">
+                <strong>If you have any questions or concerns, please discontinue use immediately.</strong>
+            </p>
+        </div>
+    </div>
+</div>
